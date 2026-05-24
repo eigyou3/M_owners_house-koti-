@@ -199,13 +199,26 @@ body {
   font-size:11px; letter-spacing:.3em; color:rgba(255,255,255,.35);
 }
 
-.g1{grid-column:span 5; grid-row:span 2;}
-.g2{grid-column:span 3; grid-row:span 2;}
-.g3{grid-column:span 4; grid-row:span 2;}
+.g1{grid-column:span 5; grid-row:span 3;}
+.g2{grid-column:span 7; grid-row:span 2;}
+.g3{grid-column:span 2; grid-row:span 1;}
+.g4{grid-column:span 3; grid-row:span 1;}
+.g5{grid-column:span 2; grid-row:span 1;}
 
-.g4{grid-column:span 3;}
-.g5{grid-column:span 5;}
-.g6{grid-column:span 4;}
+.g6{grid-column:span 3; grid-row:span 1;}
+.g7{grid-column:span 3; grid-row:span 2;}
+.g8{grid-column:span 2; grid-row:span 1;}
+.g9{grid-column:span 4; grid-row:span 1;}
+.g10{grid-column:span 2; grid-row:span 1;}
+.g11{grid-column:span 1; grid-row:span 1;}
+.g12{grid-column:span 4; grid-row:span 1;}
+.g13{grid-column:span 2; grid-row:span 1;}
+
+.g14{grid-column:span 2; grid-row:span 2;}
+.g15{grid-column:span 4; grid-row:span 2;}
+.g16{grid-column:span 6; grid-row:span 2;}
+
+
 /* STORY */
 .sec-story { padding:clamp(72px,10vw,120px) clamp(24px,8vw,100px); max-width:820px; margin:0 auto; text-align:center; }
 .story-label { font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:.4em; text-transform:uppercase; color:var(--mist); margin-bottom:20px; }
@@ -299,11 +312,21 @@ footer { background:var(--charcoal); padding:36px clamp(24px,8vw,100px); display
   </div>
   <div class="gallery-grid">
     <div class="g g1 reveal" data-idx="0"><img src="images/gaikan.jpg" alt="外観"></div>
-    <div class="g g2 reveal d1" data-idx="1"><img src="images/lighting.jpg" alt="照明"></div>
-    <div class="g g3 reveal d2" data-idx="2"><img src="images/garden.jpg" alt="庭"></div>
-    <div class="g g4 reveal d1" data-idx="3"><img src="images/washroom.jpg" alt="洗面室"></div>
-    <div class="g g5 reveal d2" data-idx="4"><img src="images/storage.jpg" alt="収納"></div>
-    <div class="g g6 reveal d3" data-idx="5"><img src="images/R.jpg" alt="R垂壁"></div>
+    <div class="g g2 reveal d1" data-idx="1"><img src="images/storage.jpg" alt="収納"></div>
+    <div class="g g3 reveal d2" data-idx="2"><img src="images/illust.jpg" alt="イラスト"></div>
+    <div class="g g4 reveal d1" data-idx="3"><img src="images/R.jpg" alt="R垂壁"></div>
+    <div class="g g5 reveal d2" data-idx="4"><img src="images/washroom.jpg" alt="洗面室"></div>
+    <div class="g g6 reveal d4" data-idx="5"><img src="images/green.jpg" alt="リビング"></div>
+    <div class="g g7 reveal d6" data-idx="6"><img src="images/living.jpg" alt="リビング"></div>
+    <div class="g g8 reveal d5" data-idx="7"><img src="images/design.jpg" alt="物撮り"></div>
+    <div class="g g9 reveal d3" data-idx="8"><img src="images/granma_kid.jpg" alt="おばあさまとお子さま"></div>
+    <div class="g g10 reveal d4" data-idx="9"><img src="images/garden.jpg" alt="庭"></div>
+    <div class="g g11 reveal d5" data-idx="10"><img src="images/illust_hall.jpg" alt="照明"></div>
+    <div class="g g12 reveal d6" data-idx="11"><img src="images/empty.jpg" alt="引渡の前日"></div>
+    <div class="g g13 reveal d6" data-idx="12"><img src="images/konan.jpg" alt="イラスト"></div>
+    <div class="g g14 reveal d6" data-idx="13"><img src="images/hall.jpg" alt="玄関ホール"></div>
+    <div class="g g15 reveal d6" data-idx="14"><img src="images/tree_kid.jpg" alt="木の下のお子さま"></div>
+    <div class="g g16 reveal d6" data-idx="15"><img src="images/M_gaikan_photo.jpg" alt="完成写真"></div>
   </div>
 </section>
 
@@ -407,11 +430,25 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 // ── Gallery Modal ──
 const galleryImgs = [
   {src:'images/gaikan.jpg',   alt:'外観'},
-  {src:'images/lighting.jpg', alt:'照明'},
-  {src:'images/garden.jpg',   alt:'庭'},
-  {src:'images/washroom.jpg', alt:'洗面室'},
-  {src:'images/storage.jpg',  alt:'収納'},
-  {src:'images/R.jpg',        alt:'R垂壁'},
+  {src:'images/storage.jpg', alt:'照明'},
+  {src:'images/illust.jpg',   alt:'庭'},
+  {src:'images/R.jpg', alt:'イラスト'},
+  {src:'images/washroom.jpg',  alt:'収納'},
+  
+  {src:'images/green.jpg',        alt:'植物'},
+  {src:'images/living.jpg',       alt:'リビング'},
+  {src:'images/design.jpg',       alt:'物撮り'},    
+  {src:'images/granma_kid.jpg', alt:'おばあさまとお子さま'},
+
+  {src:'images/garden.jpg', alt:'サッカー少年たち'},
+  {src:'images/illust_hall.jpg', alt:'照明のイラスト'},
+  
+  {src:'images/empty.jpg', alt:'引渡の前日'},
+  {src:'images/konan.jpg', alt:'コナン'},
+  
+  {src:'images/hall.jpg', alt:'玄関ホール'},
+  {src:'images/tree_kid.jpg', alt:'木の下のお子さま'},
+  {src:'images/M_gaikan_photo.jpg', alt:'完成写真'},
 ];
 let modalIdx = 0;
 
